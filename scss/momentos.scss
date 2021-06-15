@@ -1,0 +1,58 @@
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+
+@import "./fonts";
+@import "./colors";
+@import "./mixins";
+@import "./global";
+@import "./scrollbar";
+// @import "./theming";
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+   
+}
+
+.hero {
+    background-image: url(../img/hero.png);
+    background-position-x: right;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: 100vh;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.tamanios {
+    background-color: #FAF7ED;
+    height: 100vh;
+}
+.ingredientes{
+    background-image: url(../img/fondo-ingredientes.png);
+    background-position-x: right;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+    padding-top: 100px;
+    h1 {
+        color: white;
+    }
+}
+.contactanos{
+    background-image: url(../img/contacto@2x.png);
+    background-position-x: 145%;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+footer {
+    height: 25vh;
+    background-image: url(../img/footer.png);
+}

@@ -1,0 +1,186 @@
+$primary: #f40000;
+$secondary: #f72525;
+$gold: #99774c;
+$white: #ffffff;
+$black: #000000;
+$gray: #6f6f6f;
+$red: #f40000;
+$azul: #0099ff;
+
+$light: #ffffff;
+
+$themes: (
+  gris: (
+    backgroundColor: $gray,
+    textColor: $dark,
+    buttonTextColor: $dark,
+    buttonTextTransform: none,
+    buttonTextHoverColor: $dark,
+    buttonHoverColor: darken($gray, 1),
+    buttonColor: $gray,
+    buttonBorder: 2px solid lighten($dark, 30),
+    buttonHoverBorderColor: $dark,
+    logoBgColor: darken($gray, 8),
+    pulseBgColor: $white,
+    pulseTextColor: $black,
+    sidenavBgColor: $gray,
+  ),
+  dorado: (
+    backgroundColor: $gold,
+    textColor: $dark,
+    buttonTextColor: $dark,
+    buttonTextTransform: none,
+    buttonTextHoverColor: $dark,
+    buttonHoverColor: darken($gold, 1),
+    buttonColor: $gold,
+    buttonBorder: 2px solid lighten($dark, 30),
+    buttonHoverBorderColor: $dark,
+    logoBgColor: darken($gold, 8),
+    pulseBgColor: $black,
+    pulseTextColor: $white,
+    sidenavBgColor: $gold,
+  ),
+  rojo: (
+    backgroundColor: $primary,
+    textColor: $dark,
+    buttonTextColor: $dark,
+    buttonTextTransform: none,
+    buttonTextHoverColor: $dark,
+    buttonHoverColor: darken($primary, 1),
+    buttonColor: $primary,
+    buttonBorder: 2px solid lighten($dark, 30),
+    buttonHoverBorderColor: $dark,
+    logoBgColor: darken($primary, 8),
+    pulseBgColor: $black,
+    pulseTextColor: $white,
+    sidenavBgColor: $primary,
+
+  ),
+  negro: (
+    backgroundColor: $black,
+    textColor: $dark,
+    buttonTextColor: $black,
+    buttonTextTransform: none,
+    buttonTextHoverColor: $dark,
+    buttonHoverColor: darken($black, 1),
+    buttonColor: $black,
+    buttonBorder: 2px solid lighten($dark, 30),
+    buttonHoverBorderColor: $dark,
+    logoBgColor: lighten($black, 10),
+    pulseBgColor: $white,
+    pulseTextColor: $black,
+    sidenavBgColor: $gray,
+  )
+);
+
+/*
+   * Implementation of themes
+   */
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+/*
+ * Actual styles for the app
+ */
+
+nav,
+.btn,
+.dropdown-content li:hover {
+  @include themify($themes) {
+    background-color: themed("backgroundColor");
+  }
+}
+
+.logo {
+  @include themify($themes) {
+    background-color: themed("logoBgColor");
+  }
+}
+
+.sidenav li > a:hover,
+.sidenav li > a.active {
+  @include themify($themes) {
+    background-color: themed("sidenavBgColor");
+  }
+}
+
+.sidenav .collapsible-header:hover {
+  @include themify($themes) {
+    background-color: themed("sidenavBgColor");
+  }
+}
+
+.pulse{
+  @include themify($themes) {
+    background-color: themed("pulseBgColor");
+    color: themed("pulseTextColor");
+  }
+}
+
+.app-root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  > div {
+    display: flex;
+    flex: 1;
+  }
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+ @include themify($themes) {
+    color: themed("textColor");
+    background-color: themed("backgroundColor");
+  }
+
+  .btn- {
+    max-width: 20em;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 15px 32px;
+    display: inline-block;
+    transition: color 0.1s, border-color 0.1s, background-color 0.1s;
+
+    @include themify($themes) {
+      border: themed("buttonBorder");
+      color: themed("buttonTextColor");
+      border-color: themed("buttonBorder");
+      background-color: themed("buttonColor");
+      text-transform: themed("buttonTextTransform");
+
+      &:hover {
+        color: themed("buttonTextHoverColor");
+        border-color: themed("buttonHoverBorderColor");
+        background-color: themed("buttonHoverColor");
+      }
+    }
+  }
+}
