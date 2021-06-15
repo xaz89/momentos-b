@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/momentos.css">
     <title>MOMENTOS</title>
   </head>
@@ -22,57 +22,57 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
+                <a class="nav-link" href="#sizes">SIZES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                <a class="nav-link" href="#ingredientes">INGREDIENTES</a>
               </li>
+              <li class="nav-item">
+                <a class="btn btn-primary" href="#contactanos">CONTÁCTANOS</a>
+              </li>
+              
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            
           </div>
         </div>
       </nav>
 
       <div class="hero">
           <div class="container h-100">
-              <div class="row align-items-center h-75">
-                  <div class="col-lg-6">
+              <div class="row align-items-center justify-content-center h-75">
+                  <div class="col-lg-6 col-md-10" data-aos="fade-right">
                       <h1>Sorprende a tu favorit@ con una tabla de quesos</h1>
                         <p>Tenemos 3 tamaños de tablas de quesos para compartir, sorprender y consentir a tu persona favorita.</p>
                         <button class="btn btn-primary">Ordena tu tabla</button>
                     </div>
+                    <div class="col-lg-6 d-lg-block d-md-none d-none"></div>
+                    
+              </div>
+              <div class="mx-auto w-100 text-center mt-2" data-aos="flip-up">
+                <a href="#sizes"><img src="./img/scroll.svg" alt="" srcset=""></a>
               </div>
           </div>
       </div>
-      <div class="tamanios">
+      <div class="tamanios" id="sizes">
         <div class="container-fluid h-100">
             <div class="row align-items-center h-100">
-                <div class="col-lg-6 p-0">
+                <div class="col-lg-6 p-0" data-aos="fade-right">
                     <img src="./img/tamanio.png" class="img-fluid" alt="" srcset="">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-left">
                     <h1>NUESTROS TAMAÑOS</h1>
                       <ul> 
                           <li>
                               <h5>Tabla grande</h5>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
                           </li>
                           <li>
                               <h5>Tabla mediana</h5>
@@ -89,29 +89,29 @@
         </div>
       </div>
 
-      <div class="ingredientes">
+      <div class="ingredientes" id="ingredientes">
           <div class="container">
-             <div class="row">
+             <div class="row justify-content-between">
                 <div class="col-lg-12">
                     <h1 class="text-center">INGREDIENTES</h1>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 p-3" data-aos="fade-right">
                     <img src="./img/nueces.png" class="img-fluid mx-auto d-block" alt="" srcset="">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 p-3" data-aos="fade-left">
                     <img src="./img/pretzels.png" class="img-fluid mx-auto d-block" alt="" srcset="">
                 </div>
              </div>
           </div>
       </div>
       
-      <div class="contactanos">
+      <div class="contactanos" id="contactanos">
           <div class="container h-100">
               <div class="row align-items-center h-100">
                   <div class="col-lg-6 h-100">
                     <h1 class="mb-2">CONTÁCTANOS</h1>
                     <div class="center-flex">
-                        <form class="shadow-lg bg-white p-2">
+                        <form class="shadow-lg bg-white p-2" data-aos="fade-up">
                             <div class="mb-3">
                               <label for="exampleInputEmail1" class="form-label">Email address</label>
                               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -138,6 +138,26 @@
 
       </footer>
 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -148,5 +168,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

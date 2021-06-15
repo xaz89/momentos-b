@@ -9,10 +9,60 @@
 @import "./scrollbar";
 // @import "./theming";
 
+*{
+    font-family: 'Poppins', sans-serif;
+}
+html, body{
+    width:100%;
+    overflow-x:hidden;
+}
+.btn-primary{
+    @include border-radius(1.25rem 1.25rem);
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #AD0000;
+    border-color: #990202;
+    &:hover{
+        color: #fff;
+        background-color: #970303;
+        border-color: #7a0303;
+
+    }
+}
+
+.btn-check:active+.btn-primary:focus, .btn-check:checked+.btn-primary:focus, .btn-primary.active:focus, .btn-primary:active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.25rem rgba($color: #970303, $alpha: 0.15);
+}
+
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color: #fff;
+    background-color: #970303;
+    border-color: #7a0303; 
+    box-shadow: 0 0 0 0.25rem rgba($color: #970303, $alpha: 0.5); 
+}
+
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #970303;
+    border-color: #7a0303;
+}
+
+
 .navbar {
     position: absolute;
     width: 100%;
     height: 100px;
+    li.nav-item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .nav-link{
+        letter-spacing: 2px;
+        &.active {
+            border-bottom: 4px solid #AD0000;
+        }
+    }
    
 }
 
@@ -24,6 +74,7 @@
     background-size: 100vh;
     height: 100vh;
     padding-top: 100px;
+    
 }
 
 .tamanios {
@@ -56,3 +107,52 @@ footer {
     height: 25vh;
     background-image: url(../img/footer.png);
 }
+
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    .hero{
+        [class^='col-lg']{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) { 
+    *{
+        text-align: center;
+    }
+    .hero{
+        background-position-x: center;
+    background-position-y: top;
+    background-repeat: repeat-y;
+    background-size: 100vh;
+    height: 100vh;
+    padding-top: 100px;
+    background-size: cover;
+        [class^='col-lg']{
+            background: rgba($color: white, $alpha: 0.75);
+            padding: 45px;
+            @include border-radius(10px);
+            p {
+                font-size: 22px;
+            }
+        }
+    }
+ }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {  }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (max-width: 1400px) {  }
