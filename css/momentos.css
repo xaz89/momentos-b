@@ -11516,6 +11516,7 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100px;
+  z-index: 1;
 }
 .navbar li.nav-item {
   padding-left: 15px;
@@ -11569,6 +11570,9 @@ html, body {
 footer {
   height: 25vh;
   background-image: url(../img/footer.png);
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 576px) {
@@ -11579,6 +11583,25 @@ footer {
 @media (max-width: 768px) {
   * {
     text-align: center;
+  }
+
+  .navbar {
+    height: auto;
+    background-color: #FAF7ED;
+  }
+
+  .nav-link {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show > .nav-link {
+    color: #AD0000;
+  }
+
+  .navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-nav .show > .nav-link {
+    color: #AD0000;
   }
 
   .hero {
@@ -11601,6 +11624,22 @@ footer {
   }
   .hero [class^=col-lg] p {
     font-size: 22px;
+  }
+
+  .tamanios * {
+    text-align: left;
+  }
+
+  .contactanos {
+    background-size: cover;
+    min-height: auto;
+    padding-bottom: 50px;
+    background-position-x: center;
+  }
+  .contactanos .row {
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
   }
 }
 

@@ -58,28 +58,33 @@
       </div>
       <div class="tamanios" id="sizes">
         <div class="container-fluid h-100">
-            <div class="row align-items-center h-100">
+            <div class="row align-items-center justify-content-center h-100">
                 <div class="col-lg-6 p-0" data-aos="fade-right">
                     <img src="./img/tamanio.png" class="img-fluid" alt="" srcset="">
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
+                <div class="col-lg-6 col-md-8" data-aos="fade-left">
                     <h1>NUESTROS TAMAÑOS</h1>
                       <ul> 
                           <li>
-                              <h5>Tabla grande</h5>
+                              
+                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Tabla grande
+                              </button>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                               <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+
 
                           </li>
                           <li>
-                              <h5>Tabla mediana</h5>
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              Tabla mediana
+                            </button>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                           <li>
-                              <h5>Tabla chica</h5>
+                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Tabla chica
+                              </button>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                       </ul>
@@ -108,24 +113,26 @@
       <div class="contactanos" id="contactanos">
           <div class="container h-100">
               <div class="row align-items-center h-100">
-                  <div class="col-lg-6 h-100">
-                    <h1 class="mb-2">CONTÁCTANOS</h1>
-                    <div class="center-flex">
-                        <form class="shadow-lg bg-white p-2" data-aos="fade-up">
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <h1 class="mb-2">CONTÁCTANOS</h1>
+                  <div class="offset-lg-1 col-lg-4 col-md-6  h-100">
+                    <div class="center-flex w-100">
+                        <form class="shadow-lg bg-white p-2 w-100" data-aos="fade-up">
+                            <div class="mb-1">
+                              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
                             </div>
-                            <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            <div class="mb-1">
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Teléfono">
                             </div>
-                            <div class="mb-3 form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <div class="mb-1">
+                              <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                          
+                            
+                            <div class="mb-2 form-floating">
+                              <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                              <label for="floatingTextarea2">Mensaje</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary mx-auto d-block">Enviar</button>
                           </form>
                     </div>
                   </div>
@@ -144,15 +151,14 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Tamaño</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Pedir ahora</button>
       </div>
     </div>
   </div>
