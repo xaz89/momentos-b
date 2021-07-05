@@ -11578,7 +11578,42 @@ footer {
 
 /* Container needed to position the overlay. Adjust the width as needed */
 .container-imagen {
+  transition: 0.3s ease;
   position: relative;
+}
+.container-imagen .text {
+  color: white;
+  font-size: 25px;
+  position: relative;
+  transition: 0.3s ease;
+  -webkit-transform: translate(70%, -15%);
+  -moz-transform: translate(70%, -15%);
+  -ms-transform: translate(70%, -15%);
+  transform: translate(70%, -15%);
+}
+.container-imagen .text2 {
+  color: white;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s ease;
+  -webkit-transform: translate(5%, 550%);
+  -moz-transform: translate(5%, 550%);
+  -ms-transform: translate(5%, 550%);
+  transform: translate(5%, 550%);
+}
+.container-imagen:hover .text {
+  -webkit-transform: translate(5%, -35%);
+  -moz-transform: translate(5%, -35%);
+  -ms-transform: translate(5%, -35%);
+  transform: translate(5%, -35%);
+  transition: 0.3s ease;
+}
+.container-imagen:hover .text2 {
+  -webkit-transform: translate(5%, 0%);
+  -moz-transform: translate(5%, 0%);
+  -ms-transform: translate(5%, 0%);
+  transform: translate(5%, 0%);
+  transition: 0.3s ease;
 }
 
 /* Make the image to responsive */
@@ -11599,18 +11634,6 @@ footer {
 
 /* The overlay effect - lays on top of the container and over the image */
 .overlay {
-  /* position: absolute;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); 
-  color: #f1f1f1;
-  width: 100%;
-  transition: .5s ease;
-  opacity:1;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -11630,17 +11653,6 @@ footer {
   padding: 20px;
   height: 75px;
   cursor: pointer;
-}
-
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 15%;
-  left: 90%;
-  /* -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); */
   transition: 0.3s ease;
 }
 
@@ -11658,15 +11670,6 @@ footer {
   -ms-border-radius: 15px 15px 15px 15px;
   -o-border-radius: 15px 15px 15px 15px;
   border-radius: 15px 15px 15px 15px;
-}
-
-.container-imagen:hover .text {
-  top: 10%;
-  left: 10%;
-  -webkit-transform: translate(-10%, -10%);
-  -ms-transform: translate(-10%, -10%);
-  transform: translate(-10%, -10%);
-  transition: 0.3s ease;
 }
 
 @media (max-width: 576px) {

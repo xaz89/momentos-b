@@ -116,9 +116,38 @@ footer {
 
 /* Container needed to position the overlay. Adjust the width as needed */
 .container-imagen {
+    transition: .3s ease;
     position: relative;
-    // width: 100%;
-    // max-width: 300px;
+    .text{
+        color: white;
+        font-size: 25px;
+        position: relative;
+        transition: .3s ease;
+        @include transform(translate(70%, -15%));
+        
+        
+      
+      }
+      .text2{
+        color: white;
+        font-size: 15px;
+        position: relative;
+        transition: .3s ease;
+        @include transform(translate(5%, 550%));
+      }
+   
+    &:hover{
+
+        .text{
+            @include transform(translate(5%, -35%));
+            transition: .3s ease;
+        }
+        .text2{
+            @include transform(translate(5%, 0%));
+            transition: .3s ease;
+        }
+          
+    }
   }
   
   /* Make the image to responsive */
@@ -133,18 +162,6 @@ footer {
   $btn-bkg: purple;
   /* The overlay effect - lays on top of the container and over the image */
   .overlay {
-    /* position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); 
-    color: #f1f1f1;
-    width: 100%;
-    transition: .5s ease;
-    opacity:1;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center; */
 
     position: absolute;
   bottom: 0;
@@ -163,24 +180,18 @@ footer {
     padding: 20px;
     height: 75px;
     cursor: pointer;
-
-  }
-
-  .text{
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top:15%;
-    left: 90%;
-    /* -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); */
-    // text-align: center;
     transition: .3s ease;
-    
   }
+
+
   
+
   /* When you mouse over the container, fade in the overlay title */
+
+
+
+
+
   .container-imagen:hover .overlay {
     opacity: 1;
     width: 100%;
@@ -192,16 +203,7 @@ footer {
   @include border-radius(15px 15px 15px 15px);
   
   }
-  .container-imagen:hover .text {
-    // top: 10%;
-    // left: 10%;
-    top: 10%;
-    left: 10%;
-    -webkit-transform: translate(-10%, -10%);
-    -ms-transform: translate(-10%, -10%);
-    transform: translate(-10%, -10%);
-    transition: .3s ease;
-  }
+
 
 
 
