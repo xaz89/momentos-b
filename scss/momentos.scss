@@ -1,5 +1,5 @@
 // @import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
 @import "./fonts";
@@ -90,6 +90,7 @@ html, body{
     background-size: 100%;
     min-height: 100vh;
     padding-top: 100px;
+    padding-bottom: 100px;
     h1 {
         color: white;
     }
@@ -114,41 +115,7 @@ footer {
 }
 
 
-/* Container needed to position the overlay. Adjust the width as needed */
-.container-imagen {
-    transition: .3s ease;
-    position: relative;
-    .text{
-        color: white;
-        font-size: 25px;
-        position: relative;
-        transition: .3s ease;
-        @include transform(translate(70%, -15%));
-        
-        
-      
-      }
-      .text2{
-        color: white;
-        font-size: 15px;
-        position: relative;
-        transition: .3s ease;
-        @include transform(translate(5%, 550%));
-      }
-   
-    &:hover{
 
-        .text{
-            @include transform(translate(5%, -35%));
-            transition: .3s ease;
-        }
-        .text2{
-            @include transform(translate(5%, 0%));
-            transition: .3s ease;
-        }
-          
-    }
-  }
   
   /* Make the image to responsive */
   .image {
@@ -156,8 +123,8 @@ footer {
     width: 100%;
     height: auto;
     @include border-radius(15px);
-    filter:drop-shadow(0 0 16px rgba($color: #970303, $alpha: 0.15));
-    @include box-shadow(0 0 16px rgba($color: #970303, $alpha: 0.15));
+    filter:drop-shadow(0 0 16px rgba($color: #424242, $alpha: 0.15));
+    @include box-shadow(0 0 16px rgba($color: #424242, $alpha: 0.15));
   }
   $btn-bkg: purple;
   /* The overlay effect - lays on top of the container and over the image */
@@ -205,21 +172,51 @@ footer {
   }
 
 
+  /* Container needed to position the overlay. Adjust the width as needed */
+.container-imagen {
+    @include transition(.3s ease);
+    position: relative;
+    .text{
+        font-family: 'Kaushan Script', cursive;
+        color: white;
+        font-size: 30px;
+        position: relative;
+        @include transition(.3s ease);
+        @include transform(translate(70%, -15%));
+        padding: 0;
+        
+      
+      }
+      .text2{
+        font-weight: 200;
+        color: white;
+        font-size: 13px;
+        position: relative;
+        @include transition(.3s ease);
+        @include transform(translate(5%, 550%));
+      }
+   
+    &:hover{
+
+        .text{
+            @include transform(translate(5%, -35%));
+            @include transition(.3s ease);
+        }
+        .text2{
+            @include transform(translate(5%, 0%));
+            @include transition(.3s ease);
+        }
+          
+    }
+  }
+
+
 
 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
-// Small devices (landscape phones, 576px and up)
-@media (max-width: 576px) { 
-    .hero{
-        [class^='col-lg']{
-            p{
-                font-size: 15px;
-            }
-        }
-    }
- }
+
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: 768px) { 
@@ -273,6 +270,20 @@ footer {
             @include justify-content(center);
         }
     }
+
+    .container-imagen{
+        .text{
+            @include transform(translate(0%, -15%));
+        }
+        .text2 *{
+            text-align: left;
+        }
+        &:hover{
+            .text{
+                @include transform(translate(0%, -35%));
+            }
+        }
+    }
     
  }
 
@@ -284,3 +295,21 @@ footer {
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (max-width: 1400px) {  }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) { 
+    .hero{
+        background-size: contain;
+        background-repeat: no-repeat;
+        .row{
+            margin-top: 75%;
+            height: auto!important;
+        }
+        [class^='col-lg']{
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+ }

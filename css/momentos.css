@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* 
 
 $primary: #f40000;
@@ -11552,6 +11552,7 @@ html, body {
   background-size: 100%;
   min-height: 100vh;
   padding-top: 100px;
+  padding-bottom: 100px;
 }
 .ingredientes h1 {
   color: white;
@@ -11576,46 +11577,6 @@ footer {
   background-size: cover;
 }
 
-/* Container needed to position the overlay. Adjust the width as needed */
-.container-imagen {
-  transition: 0.3s ease;
-  position: relative;
-}
-.container-imagen .text {
-  color: white;
-  font-size: 25px;
-  position: relative;
-  transition: 0.3s ease;
-  -webkit-transform: translate(70%, -15%);
-  -moz-transform: translate(70%, -15%);
-  -ms-transform: translate(70%, -15%);
-  transform: translate(70%, -15%);
-}
-.container-imagen .text2 {
-  color: white;
-  font-size: 15px;
-  position: relative;
-  transition: 0.3s ease;
-  -webkit-transform: translate(5%, 550%);
-  -moz-transform: translate(5%, 550%);
-  -ms-transform: translate(5%, 550%);
-  transform: translate(5%, 550%);
-}
-.container-imagen:hover .text {
-  -webkit-transform: translate(5%, -35%);
-  -moz-transform: translate(5%, -35%);
-  -ms-transform: translate(5%, -35%);
-  transform: translate(5%, -35%);
-  transition: 0.3s ease;
-}
-.container-imagen:hover .text2 {
-  -webkit-transform: translate(5%, 0%);
-  -moz-transform: translate(5%, 0%);
-  -ms-transform: translate(5%, 0%);
-  transform: translate(5%, 0%);
-  transition: 0.3s ease;
-}
-
 /* Make the image to responsive */
 .image {
   display: block;
@@ -11626,10 +11587,10 @@ footer {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border-radius: 15px;
-  filter: drop-shadow(0 0 16px rgba(151, 3, 3, 0.15));
-  -webkit-box-shadow: 0 0 16px rgba(151, 3, 3, 0.15);
-  -moz-box-shadow: 0 0 16px rgba(151, 3, 3, 0.15);
-  box-shadow: 0 0 16px rgba(151, 3, 3, 0.15);
+  filter: drop-shadow(0 0 16px rgba(66, 66, 66, 0.15));
+  -webkit-box-shadow: 0 0 16px rgba(66, 66, 66, 0.15);
+  -moz-box-shadow: 0 0 16px rgba(66, 66, 66, 0.15);
+  box-shadow: 0 0 16px rgba(66, 66, 66, 0.15);
 }
 
 /* The overlay effect - lays on top of the container and over the image */
@@ -11672,11 +11633,69 @@ footer {
   border-radius: 15px 15px 15px 15px;
 }
 
-@media (max-width: 576px) {
-  .hero [class^=col-lg] p {
-    font-size: 15px;
-  }
+/* Container needed to position the overlay. Adjust the width as needed */
+.container-imagen {
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: relative;
 }
+.container-imagen .text {
+  font-family: "Kaushan Script", cursive;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: translate(70%, -15%);
+  -moz-transform: translate(70%, -15%);
+  -ms-transform: translate(70%, -15%);
+  transform: translate(70%, -15%);
+  padding: 0;
+}
+.container-imagen .text2 {
+  font-weight: 200;
+  color: white;
+  font-size: 13px;
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: translate(5%, 550%);
+  -moz-transform: translate(5%, 550%);
+  -ms-transform: translate(5%, 550%);
+  transform: translate(5%, 550%);
+}
+.container-imagen:hover .text {
+  -webkit-transform: translate(5%, -35%);
+  -moz-transform: translate(5%, -35%);
+  -ms-transform: translate(5%, -35%);
+  transform: translate(5%, -35%);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.container-imagen:hover .text2 {
+  -webkit-transform: translate(5%, 0%);
+  -moz-transform: translate(5%, 0%);
+  -ms-transform: translate(5%, 0%);
+  transform: translate(5%, 0%);
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
 @media (max-width: 768px) {
   * {
     text-align: center;
@@ -11737,6 +11756,35 @@ footer {
     justify-content: center;
     -webkit-justify-content: center;
     -moz-justify-content: center;
+  }
+
+  .container-imagen .text {
+    -webkit-transform: translate(0%, -15%);
+    -moz-transform: translate(0%, -15%);
+    -ms-transform: translate(0%, -15%);
+    transform: translate(0%, -15%);
+  }
+  .container-imagen .text2 * {
+    text-align: left;
+  }
+  .container-imagen:hover .text {
+    -webkit-transform: translate(0%, -35%);
+    -moz-transform: translate(0%, -35%);
+    -ms-transform: translate(0%, -35%);
+    transform: translate(0%, -35%);
+  }
+}
+@media (max-width: 576px) {
+  .hero {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .hero .row {
+    margin-top: 75%;
+    height: auto !important;
+  }
+  .hero [class^=col-lg] p {
+    font-size: 15px;
   }
 }
 
