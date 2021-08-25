@@ -11696,16 +11696,83 @@ footer {
   transition: 0.3s ease;
 }
 
+.carousel {
+  padding-bottom: 100px;
+}
+
 @media (max-width: 768px) {
   * {
     text-align: center;
   }
 
   .navbar {
+    background-color: transparent;
     height: auto;
-    background-color: #FAF7ED;
+    transition: all 0.3s;
+    padding-top: 0;
+  }
+  .navbar .navbar-nav {
+    height: 90vh;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  .navbar .container-fluid {
+    padding-top: 10px;
   }
 
+  .navbar-collapse.collapsing {
+    height: calc(100vh - 50px);
+    transition: all 0.3s;
+  }
+  .navbar-collapse.collapsing .nav-item {
+    opacity: 0;
+    transition: all 0.03s;
+  }
+
+  .navbar-collapse.collapse {
+    display: none;
+    transition: all 0.03s;
+  }
+  .navbar-collapse.collapse .nav-item {
+    opacity: 0;
+    transition: all 0.03s;
+  }
+
+  .navbar-collapse.collapse.show {
+    height: calc(100vh - 50px);
+    transition: all 0.3s;
+    display: block;
+  }
+  .navbar-collapse.collapse.show .nav-item {
+    opacity: 1;
+    transition: all 0.3s;
+  }
+
+  .bg-gris {
+    background-color: rgba(66, 66, 66, 0.5);
+    transition: all 0.3s;
+    backdrop-filter: blur(25px);
+  }
+
+  /* li:has(> a.active) 
+      {
+         background-color: red!important;
+         color: black!important;
+      } */
   .nav-link {
     width: fit-content;
     margin: auto;
@@ -11772,6 +11839,11 @@ footer {
     -moz-transform: translate(0%, -35%);
     -ms-transform: translate(0%, -35%);
     transform: translate(0%, -35%);
+  }
+
+  .ingredientes {
+    min-height: auto !important;
+    height: auto;
   }
 }
 @media (max-width: 576px) {

@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
           <a class="navbar-brand text-danger" href="#">MOMENTOS-LOGO</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"  onclick="this.parentNode.classList.toggle('bg-gris')">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -178,8 +178,8 @@
       <div class="carousel">
         <div class="container">
           <div class="row justify-content-around">
-            <div class="col-md-4">
-              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="col-lg-4 col-md-6">
+              <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -206,8 +206,8 @@
                 </button>
               </div>
             </div>
-            <div class="col-md-4">
-              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="col-lg-4 col-md-6">
+              <div id="myCarousel2" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -238,6 +238,16 @@
           </div>
         </div>
       </div>
+      <a href="" class="active">
+        <li>sdfsdf</li>
+      </a>
+      <a href="">
+        <li class="active">sdfsdf</li>
+      </a>
+      
+        <li><a href="" class="active">sdfsdf</a></li>
+        <li class="active"><a href="" >sdfsdf</a></li>
+        <li><a href="" class="">sdfsdf</a></li>
       
       <div class="contactanos" id="contactanos">
           <div class="container h-100">
@@ -308,6 +318,29 @@
 
     <script>
       AOS.init();
+    </script>
+
+    <script>
+      var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false
+});
+    </script>
+    <script>
+      var myCarousel = document.querySelector('#myCarousel2')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: 2000,
+  wrap: false
+});
+    </script>
+
+    <script>
+      if (node.parentElement) {
+    node.parentElement.style.color = "red";
+}
+
+
     </script>
   </body>
 </html>
