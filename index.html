@@ -25,13 +25,13 @@
                 <a class="nav-link active" aria-current="page" href="#">NOSOTROS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sizes">SIZES</a>
+                <a class="nav-link" aria-current="page" href="#sizes">SIZES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#ingredientes">INGREDIENTES</a>
+                <a class="nav-link" aria-current="page" href="#ingredientes">INGREDIENTES</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-primary" href="#contactanos">CONTÁCTANOS</a>
+                <a class="btn btn-primary" aria-current="page" href="#contactanos">CONTÁCTANOS</a>
               </li>
               
             </ul>
@@ -64,30 +64,36 @@
                 </div>
                 <div class="col-lg-6 col-md-8" data-aos="fade-left">
                     <h1>NUESTROS TAMAÑOS</h1>
-                      <ul> 
+                      <ol> 
                           <li>
                               
-                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Tabla grande
-                              </button>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                             
+                              
+
+                             
+                                <dt type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#tablaGrande">
+                                  Tabla grande
+                                </dt>
+                                <dd class="pl-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+
+                             
                               <!-- Button trigger modal -->
 
 
                           </li>
                           <li>
-                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#tablaGrande">
                               Tabla mediana
                             </button>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
                           <li>
-                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                              <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#tablaGrande">
                                 Tabla chica
                               </button>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                           </li>
-                      </ul>
+                      </ol>
                       <button class="btn btn-primary">Ordena tu tabla</button>
                   </div>
             </div>
@@ -281,16 +287,29 @@
       </div>
 
       <footer>
+        <div class="container">
+          <div>
+            
+          </div>
+          <div>
 
+          </div>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+        </div>
       </footer>
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="tablaGrande" tabindex="-1" aria-labelledby="tablaGrandeLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Tamaño</h5>
+        <h5 class="modal-title" id="tablaGrandeLabel">Tabla Grande</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
