@@ -11801,7 +11801,7 @@ footer .container div {
   left: 18pt;
   top: auto;
   width: 45pt;
-  z-index: 2147483646;
+  z-index: 0;
 }
 .whats img {
   width: 100%;
