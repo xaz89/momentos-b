@@ -11609,18 +11609,40 @@ html, body {
 
 footer {
   height: 25vh;
+  padding-top: 25px;
+  padding-bottom: 25px;
   background-image: url(../img/footer.png);
   background-position-x: center;
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+footer * {
+  color: #ffffff;
+}
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
 footer .container {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 50px;
   max-width: 1200px;
   justify-content: center;
+  align-items: center;
   height: 100%;
   /* .direccion{
       flex-basis: 25%;
@@ -11640,9 +11662,9 @@ footer .container {
   } */
 }
 footer .container div {
+  height: 80%;
   flex-basis: 200px;
   flex-grow: 1;
-  background-color: blue;
   max-width: 90%;
 }
 
@@ -11767,6 +11789,23 @@ footer .container div {
 
 .carousel {
   padding-bottom: 100px;
+}
+
+.whats {
+  cursor: pointer;
+  bottom: 18pt;
+  display: inline;
+  height: 45pt;
+  padding: 0px;
+  position: fixed;
+  left: 18pt;
+  top: auto;
+  width: 45pt;
+  z-index: 2147483646;
+}
+.whats img {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 768px) {
@@ -11915,6 +11954,15 @@ footer .container div {
     min-height: auto !important;
     height: auto;
   }
+
+  footer {
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  footer * {
+    text-align: left;
+  }
 }
 @media (max-width: 576px) {
   .hero {
@@ -11927,6 +11975,14 @@ footer .container div {
   }
   .hero [class^=col-lg] p {
     font-size: 15px;
+  }
+
+  footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  footer * {
+    text-align: center;
   }
 }
 
