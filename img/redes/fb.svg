@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+<svg xmlns="http://www.w3.org/2000/svg" width="27.127" height="27.127" viewBox="0 0 27.127 27.127">
   <defs>
     <style>
       .cls-1 {
@@ -12,7 +12,7 @@
     </style>
   </defs>
   <g id="fb" transform="translate(0)">
-    <circle id="Elipse_59" data-name="Elipse 59" class="cls-1" cx="25" cy="25" r="25" transform="translate(0 0)"/>
-    <path id="Fill-4" class="cls-2" d="M28.769,36.415h3.536v-9.7h2.653l.525-3.032H32.305v-2.2c0-.708.458-1.452,1.114-1.452h1.806V17H33.011v.014c-3.463.126-4.174,2.129-4.236,4.233h-.006v2.434H27v3.032h1.769Z" transform="translate(-7 -1)"/>
+    <circle id="Elipse_59" data-name="Elipse 59" class="cls-1" cx="13.563" cy="13.563" r="13.563" transform="translate(0 0)"/>
+    <path id="Fill-4" class="cls-2" d="M27.96,27.534h1.919V22.269h1.439l.285-1.645H29.878V19.433c0-.384.249-.788.6-.788h.98V17h-1.2v.007a2.075,2.075,0,0,0-2.3,2.3h0v1.32H27v1.645h.96Z" transform="translate(-16.149 -8.319)"/>
   </g>
 </svg>
