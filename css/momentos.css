@@ -11963,6 +11963,15 @@ footer .container div {
   footer * {
     text-align: left;
   }
+  footer .container div:nth-child(4) {
+    text-align: center;
+  }
+  footer .container div:nth-child(4) section {
+    text-align: center;
+  }
+  footer .container div:nth-child(4) section .img-fluid {
+    width: 50px;
+  }
 }
 @media (max-width: 576px) {
   .hero {
