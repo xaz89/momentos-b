@@ -11477,6 +11477,7 @@ body {
 html, body {
   width: 100%;
   overflow-x: hidden;
+  background: white;
 }
 
 .btn-primary {
@@ -11687,6 +11688,7 @@ footer .container div {
 /* The overlay effect - lays on top of the container and over the image */
 .overlay {
   position: absolute;
+  top: auto;
   bottom: 0;
   left: 0;
   right: 0;
@@ -11927,6 +11929,9 @@ footer .container div {
     min-height: auto;
     padding-bottom: 50px;
     background-position-x: center;
+  }
+  .contactanos h1 {
+    color: white;
   }
   .contactanos .row {
     justify-content: center;
